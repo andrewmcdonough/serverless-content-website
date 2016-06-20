@@ -19,3 +19,17 @@ Putting templates aside for some time, I think the first step should be for the 
 * Serve that file over cloudfront
 
 If I manage to get that done by the end of the day, I'll be happy
+
+## Hooking in to Github
+
+I've found [this](https://aws.amazon.com/blogs/compute/dynamic-github-actions-with-aws-lambda/) post, which could be useful.  It uses Amazon's queueing system, SNS, to store messages with information about commits.
+
+# 
+
+* Created an SNS topic
+* Created an IAM User, downloading keys
+* Created a policy giving access to publish to SNS
+* Granted the user permission access to the policy
+* In github, added a service to publish to SNS
+
+## Day 2
